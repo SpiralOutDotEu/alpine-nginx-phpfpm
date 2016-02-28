@@ -22,7 +22,7 @@ RUN apk --update add \
   supervisor \
   php-dev php-pear autoconf openssl-dev g++ make && \
   pear update-channels && \
-  php /usr/share/pear/peclcmd.php install -f mongo && \
+  php /usr/share/pear/peclcmd.php install -f mongodb && \
   echo "extension=mongodb.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` && \
   apk del --purge php-dev php-pear autoconf openssl-dev g++
 
