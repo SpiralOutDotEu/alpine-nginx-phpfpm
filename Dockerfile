@@ -23,7 +23,7 @@ RUN apk --update add \
   php-dev php-pear autoconf openssl-dev g++ make && \
   pear update-channels && \
   php /usr/share/pear/peclcmd.php install -f mongo && \
-  echo "extension=mongo.so" >> /etc/php/php.ini && \
+  echo "extension=mongodb.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` && \
   apk del --purge php-dev php-pear autoconf openssl-dev g++
 
 RUN mkdir -p /etc/nginx
