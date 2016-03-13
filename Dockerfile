@@ -19,7 +19,7 @@ RUN apk --update add \
   php-xml \
   php-xmlreader \
   php-iconv \
-  supervisor \
+  supervisor 
   #php-dev php-pear autoconf openssl-dev g++ make && \
   #pear update-channels && \
   #php /usr/share/pear/peclcmd.php install -f mongodb && \
